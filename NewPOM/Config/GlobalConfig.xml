@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<NewPOM>
+	<Settings>
+		<AUT>https://www.vicroads.vic.gov.au/registration/limited-use-permits/unregistered-vehicle-permits/get-an-unregistered-vehicle-permit</AUT>
+		<!-- Possible flag Chrome,Firefox, IE-->
+		<Browser>Chrome</Browser>
+		<!-- Possible flag Smoke, Regression, Unit  -->
+		<TestType>SmokeTest</TestType>
+		<!-- Possible Flag Y, N -->
+		<IsLog>Y</IsLog>
+		<LogPath>\..\..\..\Logs\</LogPath>
+		<ReportPath>\..\..\..\Results\</ReportPath>
+		<BuildName>ExerciseForStudyBuild</BuildName>
+		<!-- Possible Flag Y, N -->
+		<IsReport>N</IsReport>
+		<UserName>Natasha Nguyen</UserName>
+		<!-- Possible flag Selenium, Specflow  -->
+		<Technology>Selenium</Technology>
+		<ApplicationDb>Data Source=Server;Initial Catalog=Employee;Integrated Security=True</ApplicationDb>
+	</Settings>
+</NewPOM>
