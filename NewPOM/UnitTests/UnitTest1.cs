@@ -123,16 +123,18 @@ namespace NewPOM.UnitTests
         public void getDataInputFromExcel()
         {
             //get feeCalInput
-            List<Datacollection>  table = conn.GetData("SELECT * FROM permit");
-            feeCalInput[0] = MySqlUtil.ReadData(1, "VehicleType");
-            feeCalInput[1] = MySqlUtil.ReadData(1, "VehicleSubType");
-            feeCalInput[2] = MySqlUtil.ReadData(1, "VehicleAddress");
-            feeCalInput[3] = MySqlUtil.ReadData(1, "StartDate");
-            feeCalInput[4] = MySqlUtil.ReadData(1, "Duration");
+
+            string fileName = Environment.CurrentDirectory.ToString() + "\\Data\\FeeCalInput.xlsx";
+            ExcelUtil.PopulateInCollection(fileName);
+            feeCalInput[0] = ExcelUtil.ReadData(1, "VehicleType");
+            feeCalInput[1] = ExcelUtil.ReadData(1, "SubType");
+            feeCalInput[2] = ExcelUtil.ReadData(1, "VehicleAddress");
+            feeCalInput[3] = ExcelUtil.ReadData(1, "StartDate");
+            feeCalInput[4] = ExcelUtil.ReadData(1, "Duration");
 
 
             //get vehicleDetailsInput
-            string fileName = Environment.CurrentDirectory.ToString() + "\\Data\\VehicleDetailsInput.xlsx";
+            fileName = Environment.CurrentDirectory.ToString() + "\\Data\\VehicleDetailsInput.xlsx";
             ExcelUtil.PopulateInCollection(fileName);
             vehicleDetailsInput[0] = ExcelUtil.ReadData(1, "Make");
             vehicleDetailsInput[1] = ExcelUtil.ReadData(1, "Color");

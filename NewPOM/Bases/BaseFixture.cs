@@ -17,12 +17,12 @@ namespace NewPOM.Base
     
     public class BaseFixture
     {
-        public static MySqlConnection conn { set; get; }
+        //public static MySqlConnection conn { set; get; }
 
         [OneTimeSetUp]
         public void TestSuiteSetup()
         {
-            conn = MySqlUtil.DBConnect();
+            //conn = MySqlUtil.DBConnect();
             ExtentTestCustom.CreateParentTest(GetType().Name);
         }
 
@@ -30,7 +30,7 @@ namespace NewPOM.Base
         protected void TestSuiteTearDown()
         {
             ExtentReportContext.Instance.Flush();
-            conn.DBClose();
+            //conn.DBClose();
         }
 
         [SetUp]

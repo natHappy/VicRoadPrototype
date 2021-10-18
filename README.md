@@ -31,7 +31,9 @@ It includes:
 ### How to execute tests
 
 Running from TextExplorer at of Visual Studio: There are 4 test cases to be run.
-* UnitTest1 and UnitTest2: these tests are using framework using NUnit
+* UnitTest1 and UnitTest2: these tests are using framework using NUnit. 
+- UnitTest1: VicRoad's Unregister permit application
+- UnitTest2: Dummy test to demonstrate Extent Report will produce only 1 report for multi tests
 * Fee Application Feature and Navigating Feature: BDD test cases using Specflow
 
 
